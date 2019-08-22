@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://${PG_MYDB1_HOST:localhost}:${PG_MYDB1_PORT:5432}/${PG_MYDB1_SCHEMA:docker}
+    driver-class-name: org.postgresql.Driver
+    username: ${PG_MYDB1_ROLE:docker}
+    password: ${PG_MYDB1_PASSWORD:docker}
+    hikari:
+      maximumPoolSize: 10
+      maxLifetime: 30000
